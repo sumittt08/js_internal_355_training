@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; height: 100vh; display: flex; flex-direction: column;">
+
+    <div style="background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 10;">
+        <div style="text-align: center; padding: 20px 0;">
+            <h1 style="margin: 0; color: #2c3e50; font-size: 28px; text-transform: uppercase; letter-spacing: 1px;">Final Project Evaluation</h1>
+        </div>
+        <div style="border-top: 3px solid #4CAF50; border-bottom: 1px solid #ddd; padding: 15px 0; text-align: center; background-color: #fff;">
+            <a href="#" style="text-decoration: none; color: #333; margin: 0 15px; font-weight: 600; font-size: 14px;">HOME</a>
+            <a href="#" style="text-decoration: none; color: #555; margin: 0 15px; font-size: 14px;">GALLERY</a>
+            <a href="#" style="text-decoration: none; color: #555; margin: 0 15px; font-size: 14px;">SERVICES</a>
+            <a href="#" style="text-decoration: none; color: #555; margin: 0 15px; font-size: 14px;">ABOUT</a>
+            <a href="#" style="text-decoration: none; color: #555; margin: 0 15px; font-size: 14px;">CONTACT</a>
+        </div>
+    </div>
+
+    <div style="display: flex; flex: 1; width: 100%; height: 100%; overflow: hidden;">
+
+        <div style="flex: 1; background-color: #e0f7fa; padding: 30px; border-right: 1px solid #b2ebf2; overflow-y: auto;">
+            <h3 style="color: #006064; border-bottom: 2px solid #00acc1; padding-bottom: 10px; margin-top: 0;">Quick Links</h3>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="padding: 10px 0; border-bottom: 1px solid #b2ebf2; color: #00838f;">Dashboard Overview</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #b2ebf2; color: #00838f;">Profile Settings</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #b2ebf2; color: #00838f;">My Messages</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #b2ebf2; color: #00838f;">Reports</li>
+            </ul>
+        </div>
+
+        <div style="flex: 2; background-color: #fff3e0; padding: 30px; text-align: center; overflow-y: auto;">
+            <h2 style="color: #e65100; margin-top: 0; font-size: 22px;">Important Notices</h2>
+            <div style="background-color: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-align: left; border-left: 4px solid #ff9800;">
+                <strong style="color: #e65100;">Notice 1:</strong> Exam schedules have been released.
+            </div>
+            <div style="background-color: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-align: left; border-left: 4px solid #ff9800;">
+                <strong style="color: #e65100;">Notice 2:</strong> Holiday declared for next Friday.
+            </div>
+        </div>
+
+        <div style="flex: 1; background-color: #e8f5e9; padding: 30px; display: flex; flex-direction: column; align-items: center; overflow-y: auto;">
+            
+            <div style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 320px;">
+                <h3 style="text-align: center; color: #2e7d32; margin-top: 0; margin-bottom: 15px;">Student Registration</h3>
+                
+                <form id="studentForm">
+                    <div style="margin-bottom: 12px;">
+                        <label style="display: block; color: #555; font-size: 12px; margin-bottom: 5px; font-weight: bold;">Name</label>
+                        <input type="text" id="name" placeholder="Enter Name" style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
+                        <small id="nameError" style="color: red; font-size: 11px; display: none;"></small>
+                    </div>
+
+                    <div style="margin-bottom: 12px;">
+                        <label style="display: block; color: #555; font-size: 12px; margin-bottom: 5px; font-weight: bold;">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email" style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
+                        <small id="emailError" style="color: red; font-size: 11px; display: none;"></small>
+                    </div>
+
+                    <div style="margin-bottom: 12px;">
+                        <label style="display: block; color: #555; font-size: 12px; margin-bottom: 5px; font-weight: bold;">Gender</label>
+                        <div style="display: flex; gap: 15px; font-size: 13px;">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                        </div>
+                        <small id="genderError" style="color: red; font-size: 11px; display: none;"></small>
+                    </div>
+
+                    <div style="margin-bottom: 12px;">
+                        <label style="display: block; color: #555; font-size: 12px; margin-bottom: 5px; font-weight: bold;">Course</label>
+                        <select id="course" style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
+                            <option value="">-- Select Course --</option>
+                            <option value="HTML/CSS">HTML/CSS</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Python">Python</option>
+                        </select>
+                        <small id="courseError" style="color: red; font-size: 11px; display: none;"></small>
+                    </div>
+
+                    <div style="margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="terms">
+                        <label for="terms" style="font-size: 12px; color: #555;">I accept Terms & Conditions</label>
+                    </div>
+                    <small id="termsError" style="color: red; font-size: 11px; display: none; margin-top: -10px; margin-bottom: 10px;"></small>
+
+                    <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">REGISTER</button>
+                </form>
+
+                <div id="output" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #28a745; background-color: #e9ffe9; border-radius: 5px;">
+                    <h4 style="color: green; text-align: center; margin: 0 0 10px 0;">Registration Successful!</h4>
+                    <div id="outputData" style="color: #155724; font-size: 13px; line-height: 1.6;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('studentForm').addEventListener('submit', function(event) {
+            // Prevent page reload [cite: 22]
+            event.preventDefault();
+
+            // Reset errors and output
+            let isValid = true;
+            document.querySelectorAll('small').forEach(el => el.style.display = 'none');
+            document.getElementById('output').style.display = 'none';
+
+            // Fetch Values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const course = document.getElementById('course').value;
+            const terms = document.getElementById('terms').checked;
+            const genderEl = document.querySelector('input[name="gender"]:checked');
+            const gender = genderEl ? genderEl.value : null;
+
+            // --- Validation Rules ---
+            
+            // Name should not be empty [cite: 16]
+            if (name === "") {
+                showError('nameError', 'Name is required');
+                isValid = false;
+            }
+
+            // Email should be valid [cite: 17]
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                showError('emailError', 'Enter a valid email');
+                isValid = false;
+            }
+
+            // Gender must be selected [cite: 18]
+            if (!gender) {
+                showError('genderError', 'Select a gender');
+                isValid = false;
+            }
+
+            // Course must be selected [cite: 19]
+            if (course === "") {
+                showError('courseError', 'Select a course');
+                isValid = false;
+            }
+
+            // Terms checkbox must be checked [cite: 20]
+            if (!terms) {
+                showError('termsError', 'You must accept terms');
+                isValid = false;
+            }
+
+            // --- On Successful Submission ---
+            if (isValid) {
+                const outputData = document.getElementById('outputData');
+                
+                // Display all entered data below the form [cite: 23]
+                outputData.innerHTML = `
+                    <strong>Name:</strong> ${name}<br>
+                    <strong>Email:</strong> ${email}<br>
+                    <strong>Gender:</strong> ${gender}<br>
+                    <strong>Course:</strong> ${course}
+                `;
+
+                // Show success message area
+                document.getElementById('output').style.display = 'block';
+            }
+        });
+
+        function showError(id, msg) {
+            const el = document.getElementById(id);
+            el.innerText = msg;
+            el.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
