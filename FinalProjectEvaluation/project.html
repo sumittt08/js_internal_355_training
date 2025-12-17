@@ -100,15 +100,15 @@
 
     <script>
         document.getElementById('studentForm').addEventListener('submit', function(event) {
-            // Prevent page reload [cite: 22]
+            
             event.preventDefault();
 
-            // Reset errors and output
+            
             let isValid = true;
             document.querySelectorAll('small').forEach(el => el.style.display = 'none');
             document.getElementById('output').style.display = 'none';
 
-            // Fetch Values
+            
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const course = document.getElementById('course').value;
@@ -116,44 +116,42 @@
             const genderEl = document.querySelector('input[name="gender"]:checked');
             const gender = genderEl ? genderEl.value : null;
 
-            // --- Validation Rules ---
             
-            // Name should not be empty [cite: 16]
             if (name === "") {
                 showError('nameError', 'Name is required');
                 isValid = false;
             }
 
-            // Email should be valid [cite: 17]
+            
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(email)) {
                 showError('emailError', 'Enter a valid email');
                 isValid = false;
             }
 
-            // Gender must be selected [cite: 18]
+            
             if (!gender) {
                 showError('genderError', 'Select a gender');
                 isValid = false;
             }
 
-            // Course must be selected [cite: 19]
+            
             if (course === "") {
                 showError('courseError', 'Select a course');
                 isValid = false;
             }
 
-            // Terms checkbox must be checked [cite: 20]
+           
             if (!terms) {
                 showError('termsError', 'You must accept terms');
                 isValid = false;
             }
 
-            // --- On Successful Submission ---
+            
             if (isValid) {
                 const outputData = document.getElementById('outputData');
                 
-                // Display all entered data below the form [cite: 23]
+                
                 outputData.innerHTML = `
                     <strong>Name:</strong> ${name}<br>
                     <strong>Email:</strong> ${email}<br>
@@ -161,7 +159,7 @@
                     <strong>Course:</strong> ${course}
                 `;
 
-                // Show success message area
+                
                 document.getElementById('output').style.display = 'block';
             }
         });
